@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --color-bg-base: #FAF7F2;
+    --color-surface-card: #FFFFFF;
+    --color-gold: #8C6B28;
+  }
+
+  html.dark {
+    --color-bg-base: #070B13;
+    --color-surface-card: #0B111E;
+    --color-gold: #C5A059;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #FAF7F2;
+    color: #1C1917;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  html.dark body {
+    background-color: #070B13;
+    color: #E2E8F0;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-institutional, .font-editorial {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  .font-logo-serif {
+    font-family: 'Cinzel', 'Playfair Display', 'Cormorant Garamond', Georgia, 'Times New Roman', serif !important;
+  }
+
+  .font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Metallic Golden Serif Logo styling matching architectural sign */
+.etes-logo-gold {
+  background: linear-gradient(180deg, #FFF0B8 0%, #F5D886 24%, #DFB76C 50%, #B88E38 75%, #845F16 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 2px rgba(223, 183, 108, 0.35));
+}
+
+.etes-logo-gold-light {
+  background: linear-gradient(180deg, #C5A059 0%, #A37E30 45%, #7A5814 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
+}
+
+/* Metallic Silver Serif styling for institutional descriptor */
+.etes-logo-silver {
+  background: linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 30%, #CBD5E1 65%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8));
+}
+
+/* Custom scrollbar for institutional look */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(197, 160, 89, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(197, 160, 89, 0.6);
+}

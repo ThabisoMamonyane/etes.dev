@@ -1,0 +1,6 @@
+{
+  "name": "ETES Digital Headquarters™",
+  "description": "Institutional operating environment for Employment Trust & Empowerment Solutions (ETES), unifying public governance, employee assessments, executive intelligence, investor data room, ETES Thrive Community room, independent contractor / freelancer room, and trust directory.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
